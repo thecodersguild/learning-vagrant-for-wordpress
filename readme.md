@@ -19,7 +19,7 @@ Vagrant is a tool that does lot of things and has a lot of uses. But let us _**l
 - Vagrant is a **Command-Line Tool**, and
 - Vagrant's actions are **Configured via a File** named `Vagrantfile`.
 
-##"Easy" Vagrant Options for WordPress
+##"Easy" Options for Vagrant + WordPress
 There are many _"easy"_ options to get started using Vagrant with WordPress. They include:
 
 - [VCCW](http://vccw.cc)
@@ -34,7 +34,7 @@ There are many _"easy"_ options to get started using Vagrant with WordPress. The
 - [Easy WordPress VMs with Vagrant and Ansible](https://github.com/jalefkowit/vagrant-ansible-wordpress)
 - [WPLib Box](https://github.com/wplib/wplib-box/)
 
-**Except the problem with using all of these** is -- _if you are not yet proficient with Vagrant_ -- you will mostly likely get stuck without the skills to troubleshoot just as an algebra student could not begin to have the skills to pass an advanced calculus test, especially if you are on a deadline.  
+**Except the problem with using these when you are new to Vagrant is** you will mostly likely get stuck without the skills to troubleshoot just as an algebra student could not begin to pass an advanced calculus test. And you really don't want to be stuck up a creek without a paddle when you are on a deadline.  
 
 ###Better to Learn Vagrant from the Ground Up
 Once you'd learn the fundamentals of Vagrant then is makes sense to revisit potentially using these _"easy"_ solutions. And once you start to get proficient with Vagrant you can study the `Vagrantfile` for any of the above options to learn how to handle more advanced configurations.
