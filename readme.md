@@ -12,7 +12,7 @@ Vagrant is a tool that does lot of things and has a lot of uses. But let us _**l
 
 > _Vagrant is a software tool for loading and managing [**_Virtual Machines_**](https://en.wikipedia.org/wiki/Virtual_machine) on your development computer by controlling a [**_Provider_**](https://docs.vagrantup.com/v2/providers/) such as Oracle's VirtualBox or VMWare Fusion. The virtual machine will run a Linux-based web & database server such as Apache or Nginx & MySQL or Maria to server your web projects from WordPress's source files stored on a local directory of your development computer._
 ><br><br>
-> _In addition Vagrant [_**Provisions**_](https://docs.vagrantup.com/v2/provisioning/index.html) your virtual machine by running whatever scripts and/or tools needed like [_**Puppet**_](https://puppetlabs.com/puppet/what-is-puppet) or [_**Chef**_](https://learn.chef.io/) to install and configure server software as well as to run [_**Composer**_](https://getcomposer.org/) for downloading and configuring your source code. you required to make your VM ready for your development work._
+> _In addition Vagrant [_**Provisions**_](https://docs.vagrantup.com/v2/provisioning/index.html) your virtual machine by running whatever scripts and/or tools needed to install and configure server software -- tools like [_**Puppet**_](https://puppetlabs.com/puppet/what-is-puppet) and [_**Chef**_](https://learn.chef.io/) -- and Vagrant can also run [_**Composer**_](https://getcomposer.org/) to download and configure your source code to make your virtual machine ready for your development._
 
 ###Key Basics about Vagrant
 - Vagrant is **Open-Source**, 
