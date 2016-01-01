@@ -34,13 +34,12 @@ There are many _"easy"_ options to get started using Vagrant with WordPress. The
 - [Easy WordPress VMs with Vagrant and Ansible](https://github.com/jalefkowit/vagrant-ansible-wordpress)
 - [WPLib Box](https://github.com/wplib/wplib-box/)
 
-**Except the problem with using all of these** is -- _if you are not yet proficient with Vagrant_ -- you will mostly likely to get stuck without the skills to troubleshoot like an algebra student in advanced calculus final exam, especially if you are on a deadline.  
+**Except the problem with using all of these** is -- _if you are not yet proficient with Vagrant_ -- you will mostly likely get stuck without the skills to troubleshoot just as an algebra student could not begin to have the skills to pass an advanced calculus test, especially if you are on a deadline.  
 
-**Better to learn Vagrant from the ground up** and then you can revisit potentially using these _"easy"_ solutions.
+###Better to Learn Vagrant from the Ground Up
+Once you'd learn the fundamentals of Vagrant then is makes sense to revisit potentially using these _"easy"_ solutions. And once you start to get proficient with Vagrant you can study the `Vagrantfile` for any of the above options to learn how to handle more advanced configurations.
 
-However, once you start to get proficient with Vagrant you can study the `Vagrantfile` for any of the above options to learn how to handle more advanced configurations.
-
-And when you become very proficient with Vagrant and whichever provisioner you choose then some of the easy options might be a great choice for you. However by then you'll probably want the control of building the exact box you need instead.
+When you do become proficient with Vagrant and whichever provisioner you choose then some of the pre-built easy options might be a great choice. However by then you'll probably want the control of building the exact box you need anyway.
 
 ##Prerequisites
 
@@ -50,9 +49,9 @@ There are several things you need to have installed and/or have experience with 
 
 - [**On GitHub and Comfortable with Git**](https://github.com/thecodersguild/learning-git-for-wordpress) - If you do not have an account on GitHub and are not familiar with using Git to version control your source code now is as good a time as any to start.  [**You can start here**](https://github.com/thecodersguild/learning-git-for-wordpress).
 
-- [**Homebrew**](http://brew.sh) - _**OPTIONAL**_ but highly recommended. It will make installing most of the software tools on Mac OS X many times easier, and provides diagnostic tools to help you maintain a worked development machine.  To learn more about Homebrew check out [**Quick Start Using Homebrew on Mac OS X**](https://github.com/thecodersguild/quick-start-using-homebrew-on-mac-os-x).
-
 - [**VirtualBox**](https://www.virtualbox.org/wiki/Downloads) - This one is easy. You just need to download and install Oracle's open-source VirtualBox. [**You can download an installer here**](https://www.virtualbox.org/wiki/Downloads). Or better yet read our _"[_**Quick Start Installing VirtualBox on Mac OS X**_](https://github.com/thecodersguild/quick-start-installing-virtualbox-on-mac-os-x)"_.
+
+- [**Homebrew**](http://brew.sh) - _**OPTIONAL**_ but highly recommended. It will make installing most of the software tools on Mac OS X many times easier, and provides diagnostic tools to help you maintain a worked development machine.  To learn more about Homebrew check out _"[_**Quick Start Using Homebrew on Mac OS X**_](https://github.com/thecodersguild/quick-start-using-homebrew-on-mac-os-x)."_
 
 ##More to come...
 
