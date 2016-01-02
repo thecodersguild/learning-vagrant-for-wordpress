@@ -209,6 +209,8 @@ Now you should be able to make requests of your virtual box's Apache server from
 If `curl` output `Hello World!` you have success! Next try `http://99.99.99.99/` in your favorite browser and you should get the same result.
 
 
+##The End (Currently)
+If you've made it this far then you have finished what we have written thus far in our guide.  We hope it helped.
 
 ##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
