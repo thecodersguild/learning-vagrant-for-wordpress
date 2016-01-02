@@ -75,7 +75,7 @@ Another box to consider is [`scotch/box`](https://box.scotch.io/) which is a box
 
 Finally, consider [`wplib/wplib-box`](http://github.com/wplib/wplib-box) which provides everything you need for local development using the [**WPLib Professional Development Platform for WordPress**](http://wplib.org).
 
-##Initializing your 1st Vagrantfile
+##Initializing your First Vagrantfile
 Let us pick the **Precise32 Box** because it is the least likely to cause headaches when just getting started. 
 
 Create a directory `~/Sites/vagrant-wp` and then initialize Vagrant there:
@@ -94,7 +94,7 @@ That last command generates the following `Vagrantfile` _(I removed comments tha
 
     $ cat Vagrantfile | more
     
-##Running your 1st Box via Vagrant
+##Running your First Box via Vagrant
 This step is simple. Just run:
 
     $ vagrant up
@@ -104,7 +104,7 @@ This will take at least a few minutes.  It will first check to see if you have t
 ###If It Does Not Work?
 Vagrant isn't magic and sometimes it does not work.  If you run into problems at any time, just to [**Troubleshooting Vagrant**](#troubleshooting-vagrant) for potential help.
 
-###Where are Local Vagrant Box Stored?
+###Where are Local Vagrant Boxes Stored?
 When Vagrant downloads a box it places it in the `~/.vagrant.d/boxes` folder on Mac OS X. Why not open another Terminal window while `vagrant up` runs and check it out?:
 
     $ ls -l ~/.vagrant.d/boxes/
@@ -126,7 +126,7 @@ After downloading if you run `ls -l ~/.vagrant.d/boxes/` you should see somethin
     drwxr-xr-x+ 4 mikeschinkel  staff  136 Jan  2 02:51 scotch-VAGRANTSLASH-box
 
 
-##Access Your Vagrant Boxes' Command Line
+##Access Your Vagrant Box's Command Line
 Once your Vagrant Box is up and running you can connect directly to is and access it's command line using **SSH**:
 
     $ vagrant ssh
@@ -142,7 +142,7 @@ Let's use `echo` to create an `index.html` file, still from within your virtual 
 
     (box) $ echo Hello World! > /vagrant/index.html
     
-Now type `exit` to return to your local computer, and _Shazam!_ you will find your new `index.html` in the same folder as your `Vagrantfile`.  
+Now type `exit` to exit the virtual box and _Shazam!_ you will find your new `index.html` in the same folder as your `Vagrantfile` on your local computer.  
 
 ## Installing a Web Server
 We'll install Apache because it's the most widely known. This requires us to run a [**provisioning script**](https://docs.vagrantup.com/v2/provisioning/shell.html).  **Add the following** to your `VagrantFile` just after the `config.vm.box` assignment:
@@ -184,8 +184,10 @@ Now we can test to see if Apache is installed with `apachectl`:
 
 	$ vagrant ssh
     (box) $ apachectl -V
+    
+Apachectl should spit out a bunch of configuration lines if it is installed.
    
-And we can actually verify that it is running with `wget` to localhost _(that switch is "dash-uppercase-oh"):_
+Then we can actually verify that Apache is serving web pages by running `wget` on our localhost _(that switch is "dash-uppercase-oh" followed by "space-dash-space"):_
 
     (box) wget -O - http://127.0.0.1
     
@@ -208,7 +210,7 @@ If `curl` output `Hello World!` you have success! Next try `http://99.99.99.99/`
 
 
 
-##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ##Troubleshooting Vagrant
 Sometimes Vagrant can be infuriating. It's often hard to debug a problem, but here are some of the problems we've run into and the solutions we discovered:
