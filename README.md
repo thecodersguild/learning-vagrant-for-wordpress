@@ -60,7 +60,7 @@ Choose your poison:
 
 1. The easy way to install Vagrant is [**using HomeBrew with Caskroom**](https://github.com/thecodersguild/quick-start-using-homebrew-on-mac-os-x):
 
-    $ brew cask install vagrant
+        $ brew cask install vagrant
 
 2. The slightly less easy way is to [**download the Vagrant installer**](https://www.vagrantup.com/downloads.html), mount the disk image (`.DMG`) file, and then run the `Vagrant.pkg` installer.
 
@@ -78,10 +78,10 @@ Finally, consider [`wplib/wplib-box`](http://github.com/wplib/wplib-box) which p
 ##Initializing your 1st Vagrantfile
 Let us pick the **Precise32 Box** because it is the least likely to cause headaches when just getting started. 
 
-Create a directory `~/Sites/ftgu-vagrant-wp` and then initialize Vagrant there:
+Create a directory `~/Sites/vagrant-wp` and then initialize Vagrant there:
 
-    $ mkdir ~/Sites/ftgu-vagrant-wp
-    $ cd ~/Sites/ftgu-vagrant-wp
+    $ mkdir ~/Sites/vagrant-wp
+    $ cd ~/Sites/vagrant-wp
     $ vagrant init hashicorp/precise32
 
 That last command generates the following `Vagrantfile` _(I removed comments that are generated to reveal just the actual commands. You'll note [_the Vagrant syntax is the Ruby language_](http://www.eatmybusiness.com/food/2015/07/13/learn-just-enough-ruby-syntax-to-understand-how-to-write-a-vagrantfile/296/)):_
@@ -136,16 +136,16 @@ Go ahead, look around in your new Vagrant box.  Do an `ls` on the special `/vagr
     (box) $ ls /vagrant
     
 ### Vagrant Mirrors Files Between Virtual Box and Local Computer 
-The `/vagrant` directory inside your virtual box is a _mirror_ of your local computer's `~/Sites/ftgu-vagrant-wp` directory where you have created the `Vagrantfile`. _**THIS**_ is the key magic that makes Vagrant so great for web development; it lets you edit your files locally yet serve them to your browser via your virtual box!
+The `/vagrant` directory inside your virtual box is a _mirror_ of your local computer's `~/Sites/vagrant-wp` directory where you have created the `Vagrantfile`. _**THIS**_ is the key magic that makes Vagrant so great for web development; it lets you edit your files locally yet serve them to your browser via your virtual box!
 
-Let's use `echo` to create an index.html file, still from within your virtual box:
+Let's use `echo` to create an `index.html` file, still from within your virtual box:
 
     (box) $ echo Hello World! > /vagrant/index.html
     
 Now type `exit` to return to your local computer, and _Shazam!_ you will find your new `index.html` in the same folder as your `Vagrantfile`.  
 
 ## Installing a Web Server
-We'll install Apache because it's the most widely known. This requires us to run a [**provisioning script**](https://docs.vagrantup.com/v2/provisioning/shell.html).  Add the following to your `VagrantFile` just after the `config.vm.box` assignment:
+We'll install Apache because it's the most widely known. This requires us to run a [**provisioning script**](https://docs.vagrantup.com/v2/provisioning/shell.html).  **Add the following** to your `VagrantFile` just after the `config.vm.box` assignment:
 
     config.vm.provision :shell, path: "provision.sh"
     
@@ -153,7 +153,7 @@ That command tells Vagrant to run a provisioning script on the virtual machine w
 
 ###The Provisioning Script
 
- Create the `provision.sh` file in the same folder as your `Vagrantfile`. It should contain the following [Bash shell script commands](http://www.panix.com/~elflord/unix/bash-tute.html):
+**Create** `provision.sh` in the same folder as your `Vagrantfile`. It should contain the following [Bash shell script commands](http://www.panix.com/~elflord/unix/bash-tute.html):
  
     #!/usr/bin/env bash
     echo Installing Apache...
